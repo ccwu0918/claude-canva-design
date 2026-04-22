@@ -1,56 +1,56 @@
 [
   {
     "id": 1,
-    "prompt": "我想做一个SaaS产品的登录页面，给我3个风格方向对比看看",
-    "expected": "触发clarifying questions问design context/brand；产出3个variation的design_canvas；不用紫渐变/emoji/Inter等AI slop；有具体理由说明每个variation的差异维度",
-    "tests": "workflow问问题 + variations逻辑 + 反AI slop清单 + design_canvas使用"
+    "prompt": "我想做一個 SaaS 產品的登陸頁面 (Landing Page)，給我 3 個風格方向對比看看",
+    "expected": "觸發澄清問題詢問設計背景 (Design Context) 與品牌屬性；產出包含 3 個變體 (Variations) 的 design_canvas；拒絕 AI Slop（不使用紫色漸層、Emoji、Inter 字體等）；有具體理由說明每個變體的差異維度",
+    "tests": "Workflow 提問 + Variations 邏輯 + 反 AI Slop 清單 + design_canvas 使用"
   },
   {
     "id": 2,
-    "prompt": "帮我做一份10页的产品pitch deck，讲一个AI工具的创业项目",
-    "expected": "用deck_stage.js起手；先口头vocalize设计系统（色彩/字型/layout节奏）等确认；Section divider/content/data/quote多种layout交替；字号≥24px；1-indexed labels",
-    "tests": "Junior Designer先汇报再做 + deck_stage使用 + 视觉节奏 + scale规范"
+    "prompt": "幫我做一份 10 頁的產品 Pitch Deck，講一個 AI 工具的創業項目",
+    "expected": "用 deck_stage.js 起手；先口頭描述設計系統（色彩、字體、版面節奏等）待確認；交替使用 Section divider/內容/數據/引用等多種 Layout；字號 ≥ 24px；使用以 1 為起始索引的標籤 (1-indexed labels)",
+    "tests": "Junior Designer 先匯報再執行 + deck_stage 使用 + 視覺節奏 + 縮放規範 (Scale)"
   },
   {
     "id": 3,
-    "prompt": "做个30秒的HTML动画，讲神经网络怎么工作",
-    "expected": "用animations.jsx的Stage+Sprite；先写时间轴再写组件；入场easeOut出场easeIn；分phase讲故事而不是堆动画；文字停留≥3秒",
-    "tests": "animations工作流 + easing正确 + 节奏设计 + 时长控制"
+    "prompt": "做個 30 秒的 HTML 動畫，講神經網絡如何運作",
+    "expected": "用 animations.jsx 的 Stage+Sprite 組件；先寫時間軸再寫組件代碼；入場使用 easeOut，出場使用 easeIn；分階段 (Phase) 講故事而不是堆砌動畫效果；文字停留 ≥ 3 秒",
+    "tests": "Animations 工作流 + Easing 正確 + 節奏設計 + 時長控制"
   },
   {
     "id": 4,
-    "prompt": "做一个 Habit Tracker App 原型",
-    "expected": "问用户要 overview 平铺 or flow demo（默认走 overview）；用 assets/ios_frame.jsx，不手写 Dynamic Island；Tracker 属高密度型，每屏 ≥ 3 处信息密度元素（习惯完成率、连续天数、趋势曲线、成就badge等，非装饰）；至少 5-7 屏并排（首页/新建习惯/详情/统计/设置）",
-    "tests": "overview/flow 形态路由 + ios_frame 硬绑定 + 信息密度分型（高密度型）+ 多屏并排"
+    "prompt": "做一個習慣追蹤 (Habit Tracker) App 原型",
+    "expected": "詢問用戶要 Overview 平鋪或 Flow Demo（預設走 Overview）；使用 assets/ios_frame.jsx，不手寫 Dynamic Island；屬於高密度型介面，每屏 ≥ 3 處信息密度元素（習慣完成率、連續天數、趨勢曲線、成就勳章等，非裝飾）；至少展示 5-7 屏（首頁/新建習慣/詳情/統計/設置）",
+    "tests": "Overview/Flow 路由判斷 + ios_frame 強綁定 + 信息密度分型（高密度）+ 多屏並排佈局"
   },
   {
     "id": 5,
-    "prompt": "做一个读书笔记 App 原型",
-    "expected": "overview 平铺为主；ios_frame.jsx；读书笔记偏内容展示类，信息密度要求不如 Tracker 极端，但笔记列表页仍需 ≥ 3 层信息（书籍、引文、标签、进度）；至少 4-6 屏（首页书架/笔记详情/标注高亮/搜索/笔记本管理）；字体优先 serif display",
-    "tests": "overview 默认 + ios_frame + 信息层次 + 内容为主的视觉节奏"
+    "prompt": "做一個讀書筆記 App 原型",
+    "expected": "預設以 Overview 平鋪為主；使用 ios_frame.jsx；讀書筆記偏內容展示類，信息密度要求不如 Tracker 極端，但筆記列表頁仍需 ≥ 3 層信息（書籍、引文、標籤、進度）；至少展示 4-6 屏（首頁書架/筆記詳情/標註高亮/搜索/筆記本管理）；字體優先選擇 Serif Display (襯線體)",
+    "tests": "Overview 預設 + ios_frame + 信息層次設計 + 以內容為主的視覺節奏"
   },
   {
     "id": 6,
-    "prompt": "做一个跑步记录 App 原型",
-    "expected": "overview 平铺；ios_frame.jsx；跑步 App 属高密度型（地图、配速曲线、心率区间、每公里分段数据），每屏 ≥ 3 处产品差异化信息；至少 5 屏（今日总览/跑步中实时数据/路线地图/历史记录/月度统计）；避免撞 AI slop（不用紫渐变、不堆装饰 icon，但数据可视化 icon 允许保留）",
-    "tests": "overview + ios_frame + 高密度型数据可视化 + 地图/图表混排 + slop 边界条件"
-  }
-  ,{
+    "prompt": "做一個跑步記錄 App 原型",
+    "expected": "使用 Overview 平鋪與 ios_frame.jsx；跑步 App 屬高密度型（地圖、配速曲線、心率區間、每公里分段數據），每屏 ≥ 3 處產品差異化信息；至少展示 5 屏（今日總覽/跑步中實時數據/路線地圖/歷史記錄/月度統計）；避免 AI Slop（不用紫色漸層、不堆裝飾 Icon，但數據可視化 Icon 允許保留）",
+    "tests": "Overview + ios_frame + 高密度型數據可視化 + 地圖/圖表混排 + Slop 邊界條件"
+  },
+  {
     "id": 7,
-    "prompt": "帮 DJI Pocket 4 做一个发布动画",
-    "expected": "先 WebSearch 验证 Pocket 4 是否已发布和规格；走核心资产协议：下载 DJI Logo + Pocket 4 产品渲染图（不用 CSS 剪影）；写 brand-spec.md；动画用真实产品图，不是通用科技动画；收尾导出带 tech BGM 的 MP4",
-    "tests": "核心原则 #0 事实验证 + 核心资产协议（logo/产品图/色值）+ 反 CSS 剪影规则 + 视频导出"
+    "prompt": "幫 DJI Pocket 4 做一個發佈動畫",
+    "expected": "先用 WebSearch 驗證 Pocket 4 是否已發佈及其規格；走核心資產協議：下載 DJI Logo + Pocket 4 產品渲染圖（不用 CSS 剪影）；撰寫 brand-spec.md；動畫使用真實產品圖，而不是通用科技動畫；收尾導出帶有科技感 BGM 的 MP4",
+    "tests": "核心原則 #0 事實查核 + 核心資產協議（Logo/產品圖/色值）+ 反 CSS 剪影規則 + 視頻導出"
   },
   {
     "id": 8,
     "prompt": "做個好看的 iOS 冥想 App 原型",
-    "expected": "触发词为繁体中文；应识别为 App 原型任务；先问 overview 平铺还是 flow demo；用 ios_frame.jsx 不手写 Dynamic Island；冥想 App 属克制型（非高密度型），避免过多数据元素；字体优先 serif display；先问用户有无设计参考",
-    "tests": "繁体触发词识别 + overview/flow 路由 + ios_frame 硬绑定 + 信息密度分型（克制型）+ Junior Designer 先 show"
+    "expected": "識別繁體中文觸發詞與 App 原型任務；先問 Overview 平鋪還是 Flow Demo；使用 ios_frame.jsx，不手寫 Dynamic Island；冥想 App 屬克制型（非高密度型），避免過多數據元素；字體優先 Serif Display；執行前先詢問用戶是否有設計參考",
+    "tests": "繁體觸發詞識別 + Overview/Flow 路由判斷 + ios_frame 強綁定 + 信息密度分型（克制型）+ Junior Designer 先報告"
   },
   {
     "id": 9,
-    "prompt": "做完了，帮我检查一下这个 HTML 有没有问题",
-    "expected": "用 Playwright 截图验证；运行 {skill-root}/scripts/verify.py；检查控制台错误；在 Windows 环境提示用 start chrome 而非 open -a；有错误先修再交付",
-    "tests": "verification 流程 + 路径使用 skill-root 相对路径 + Windows 跨平台指令"
+    "prompt": "做完了，幫我檢查一下這個 HTML 有沒有問題",
+    "expected": "用 Playwright 截圖驗證；執行 {skill-root}/scripts/verify.py；檢查控制台錯誤；在 Windows 環境提示用 start chrome 而非 open -a；有錯誤先修復再交付",
+    "tests": "Verification 流程 + 路徑使用 skill-root 相對路徑 + Windows 跨平台指令"
   }
 ]
